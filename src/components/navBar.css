@@ -1,0 +1,70 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.link {
+  display: flex;
+}
+
+#logo {
+  margin-top: 2%;
+  width: 50%;
+}
+
+nav ul {
+  display: flex;
+  width: 461px;
+  height: 24px;
+  top: 32px;
+  list-style-type: none;
+  left: 200px;
+  gap: 30px;
+}
+
+a {
+  width: 52;
+  height: 24;
+  font-family: 'SF Compact Text Regular Italic', sans-serif;
+  text-decoration: none;
+  src: local('SF Compact Text Regular Italic'), url('sf-compact-text-italic-58646f7cbab10.woff') format('woff');
+  font-weight: 457;
+  line-height: 23.87px;
+  font-size: 20px;
+  letter-spacing: 0%;
+  color: #FFFFFFCC;
+}
+
+.link2 {
+  display: flex;
+  gap: 10px;
+}
+
+.link2-1 {
+  border: solid lightgrey 1px;
+  width: 250px;
+  height: max-content;
+  border-radius: 20px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+#search {
+  background-color: transparent;
+  border: transparent;
+  color: white;
+  margin-left: 15px;
+}
+
+#search:focus {
+  outline: none;
+}
+

@@ -1,0 +1,21 @@
+.card {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+button {
+  background-color: transparent;
+  border: transparent;
+  font-size: 30px;
+}
+
+.poster img {
+  width: 138px;
+  height: 178px;
+  top: 92px;
+  left: 986px;
+  border-radius: 12px;
+  border-width: 1px;
+  margin-top: 10px;
+  padding-bottom: 50px;
+}
