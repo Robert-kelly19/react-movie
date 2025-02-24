@@ -1,0 +1,155 @@
+.detail-hero {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -100px;
+  animation: scale linear;
+  transition: ease-in-out;
+  animation-timeline: view();
+  animation-range: exit -200px;
+}
+  
+.detail-hero h1 {
+  padding-top: 400px;
+  padding-left: 30px;
+  font-family: "SF Compact Display", sans-serif;
+  font-size: 50px;
+}
+
+.display {
+  margin-top: -165px;
+  margin-bottom: 50px;
+  padding: 30px;
+}
+
+.display h1 {
+  margin-bottom: 0px;
+}
+
+.display1 {
+  display: flex;
+  font-family: "SF Compact Display";
+  font-size: 20px;
+}
+
+.display1 ul {
+  display: flex;
+  gap: 30px;
+}
+
+.display2 {
+  display: flex;
+ gap: 20px;
+}
+
+.display2-1 {
+  display: flex;
+  width: 206px;
+  height: 54px;
+  top: 509px;
+  left: 650px;
+  border-width: 1px;
+  border-radius: 40px;
+  background-color: #ffffff;
+  color: black;
+}
+
+.display2-2 {
+  display: flex;
+  width: 206px;
+  height: 54px;
+  top: 509px;
+  left: 650px;
+  border-width: 1px;
+  border-radius: 40px;
+  color: white;
+  backdrop-filter: blur(10px); 
+  background: #ffffff4b;
+  border: solid white 1px;
+}
+
+.display2-2 p {
+  font-size: 23px;
+  font-family: "SFCompact Display", sans-serif;
+  margin-top: 15px;
+}
+
+.display2-1 p {
+  font-size: 23px;
+  font-family: "SF Compact Display", sans-serif;
+  margin-top: 15px;
+}
+
+.display-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.display3 {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding-right: 30px;
+}
+
+.display3-1 {
+  width: 60px;
+  background-color: #ffffff4b;
+  border-radius: 50px;
+}
+
+.display3-2 {
+  width: 60px;
+  background-color: #ffffff4b;
+  border-radius: 50px;
+}
+
+.cast h1 {
+  font-size: large;
+}
+
+.display3-3 {
+  width: 60px;
+  background-color: #ffffff4b;
+  border-radius: 50px;
+}
+
+#down {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.similar h1 {
+  font-size: large;
+}
+
+.detail-p {
+  font-family: "sf compact display", sans-serif;
+  font-weight: 100;
+  font-size: large;
+  padding: 30px;
+  margin-top: -60px;
+}
+
+.similar1 {
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  margin-bottom: 100px;
+}
+
+.similar1 img {
+  margin-top: 0;
+}
+
+.cast2 {
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  margin-top: 150px;
+  cursor: pointer;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 20px;
+}

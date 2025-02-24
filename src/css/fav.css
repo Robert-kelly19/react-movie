@@ -1,0 +1,21 @@
+.fav h1 {
+  text-align: center;
+  font-family: "SF Compact Display", sans-serif;
+  margin-top: 400px;
+}
+
+.heart {
+  animation: beat 1s infinite;
+  transition: ease-in-out 1s;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes beat {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

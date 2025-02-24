@@ -1,0 +1,23 @@
+.cast1 {
+ display: flex;
+ gap: 13px;
+ font-family: "inter";
+}
+
+.cast img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+}
+
+.cast1-1 h1 {
+  font-size: 15px;
+}
+
+.cast1-1 p {
+  font-size: 15px;
+}
+
+.cast1-1 {
+  margin-right: 100px;
+}
