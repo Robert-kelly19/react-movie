@@ -45,9 +45,9 @@ export default function Detail() {
         console.error("Error fetching movie:", error);
       }
     };
-    if (id) fetchMovie();
+    fetchMovie();
   }, [id]);
-
+  console.log(similar);
   useEffect(() => {
     const fetchCast = async () => {
       try {
@@ -187,9 +187,9 @@ export default function Detail() {
           <div className="cast">
             <h1>Top cast</h1>
             <div className="cast2">
-            {cast.map((actor) => (
+              {cast.map((actor) => (
                 <Cast actor={actor} key={actor.id} />
-            ))}
+              ))}
             </div>
           </div>
           <div className="similar">

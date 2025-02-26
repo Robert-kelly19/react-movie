@@ -7,7 +7,6 @@ body {
 }
 
 .head {
-  margin-top: -65px;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -101,7 +100,7 @@ body {
 
 .action1 {
   display: flex;
-  width: 206px;
+  width: 219px;
   height: 54px;
   top: 509px;
   left: 650px;
@@ -162,4 +161,68 @@ body {
 
 .trend {
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-top: -200px;
+  }
+
+  .content img {
+    height: 60px;
+    width: 200px;
+  }
+
+  .para {
+    display: none;
+  }
+
+  .genre {
+    gap: 45px;
+    margin-bottom: 30px;
+  }
+  .para1 {
+    width: max-content;
+    font-size: 15px;
+    padding: 8px;
+    height: max-content;
+  }
+
+  .genre ul {
+    margin-top: 13px;
+    font-weight: 500;
+  }
+
+  .dis {
+    font-size: small;
+  }
+
+  .action p {
+    font-size: large;
+  }
+
+  .action {
+    gap: 15px;
+  }
+
+  .action1 {
+    width: 160px;
+  }
+
+  .action2 {
+    width: 160px;
+  }
+  .trend {
+    margin-top: -280px;
+    margin-bottom: 270px;
+  }
+
+  .trend h1 {
+    margin-bottom: 15px;
+    font-size: xx-large;
+  }
+
+  .trend-grid {
+    gap: 0;
+  }
 }

@@ -9,8 +9,8 @@ export default function Cast({ actor }) {
           alt={actor.name}
         />
         <div className="cast1-1">
-          <h1>{actor.character.substring(0,20)}</h1>
-          <p>{actor.name.substring(0,7)}</p>
+          <h1>{actor.character?.split("-")[0]}</h1>
+          <p>{actor.name?.split("-")[0]}</p>
         </div>
       </div>
     </>

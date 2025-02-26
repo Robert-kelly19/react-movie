@@ -1,14 +1,15 @@
-import {useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./navBar.css";
 
 import { Search } from "../services/api";
 export default function NavBar() {
-  const [searchQuery, setSearchQuery] = useState('')
+  const [searchQuery, setSearchQuery] = useState("");
   const onSearch = (e) => {
-    alert(searchQuery)
-  }
+    e.preventDefault();
+    if (!searchQuery.trim()) return;
+  };
   return (
-    <> 
+    <>
       <nav>
         <div className="link">
           <svg
@@ -97,6 +98,7 @@ export default function NavBar() {
             </form>
             <svg
               width="20"
+              id="icon"
               height="21"
               viewBox="0 0 20 21"
               fill="none"
@@ -110,8 +112,9 @@ export default function NavBar() {
               />
             </svg>
           </div>
+          <span class="material-symbols-outlined">menu</span>
           <img
-            src="https://s3-alpha-sig.figma.com/img/44dd/d9c1/4b2cc5cc64806068acfe1df770c58553?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=gXzN828VeZomqtEcOuGP8kZpaL7~Q7b8kI34~93OdlHZsDFRwE4ohoIZr-oxTb8krBUXTTciBc~TljFvKhrdxYR1FeK5O5fBQYMAcucSmA0Vch6bErRa-jWTOodk1hMRr3uWTasZYwxdvHiNpp4NJJFebDYSeYZu5hTsjrj39YwHwjEaN1t97z9F-XlFoYgvrduo8E155z1nt9FLzIpi2-o9UWs2NqKRuE3xQbHOzwS0i2C1eZ-lNqkOA~91nuVOeN~BTpDPDqvlphUMi5TdivflsNHodhF3g0EV~HSx~NjClgBLO4at~I5BnoAQIIHv5DUffckKs3CkPzieh-SIbA__"
+            src="https://i.pinimg.com/originals/85/59/09/855909df65727e5c7ba5e11a8c45849a.png"
             alt="profile"
             id="profile"
           />
