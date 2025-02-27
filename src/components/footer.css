@@ -127,3 +127,19 @@ select:focus {
 #logo2 {
   margin-top: 15px;
 }
+
+@media (max-width: 768px) {
+  footer {
+    margin-top: -260px;
+  }
+
+  .first {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .second {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+}
