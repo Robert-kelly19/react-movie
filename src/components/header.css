@@ -155,12 +155,13 @@ body {
 
 .trend-grid {
   display: flex;
-  gap: 40px;
   overflow-x: scroll;
 }
 
 .trend {
   overflow: hidden;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 @media (max-width: 768px) {

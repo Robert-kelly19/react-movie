@@ -1,6 +1,6 @@
 .card {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 button {
@@ -10,10 +10,8 @@ button {
 }
 
 .poster img {
-  width: 138px;
-  height: 178px;
-  top: 92px;
-  left: 986px;
+  width: 238px;
+  height: 278px;
   border-radius: 12px;
   border-width: 1px;
   margin-top: 10px;

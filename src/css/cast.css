@@ -1,17 +1,15 @@
 .cast1 {
- display: flex;
- gap: 13px;
  font-family: "inter";
+ margin-right: 15px;
 }
 
 .cast img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50px;
+  width: 100%;
 }
 
 .cast1-1 h1 {
-  font-size: 15px;
+  font-size: 25px;
+  width: 170px;
 }
 
 .cast1-1 p {
@@ -20,4 +18,4 @@
 
 .cast1-1 {
   margin-right: 100px;
-}
+} 
