@@ -1,0 +1,43 @@
+.top {
+  display: flex;
+  width: 100%;
+}
+
+.top input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: red;
+}
+
+.btn {
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+#film {
+  text-align: center;
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+#film img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+#film p { 
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.results-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}

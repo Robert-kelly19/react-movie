@@ -1,5 +1,5 @@
 const BASE_URL = "https://api.themoviedb.org/3";
-const API_KEY = "42bff7ea17474804caad34f8da9f455b";
+const API_KEY =import.meta.env.VITE_APP_API_KEY
 export const Search = async (query) => {
   const response = await fetch(
     `${BASE_URL}/search/multi?api_key=${API_KEY}&query=${encodeURIComponent(

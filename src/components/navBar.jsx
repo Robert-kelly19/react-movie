@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import "./navBar.css";
+import { useNavigate } from "react-router-dom";
 
-import { Search } from "../services/api";
 export default function NavBar() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const onSearch = (e) => {
-    e.preventDefault();
-    if (!searchQuery.trim()) return;
+  let navigate = useNavigate();
+  const onSearch = () => {
+  navigate('/search')
   };
   return (
     <>
@@ -86,22 +85,12 @@ export default function NavBar() {
         </div>
         <div className="link2">
           <div className="link2-1">
-            <form className="mb-4">
-              <input
-                type="text"
-                id="search"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search for movies..."
-                className="p-2 border rounded w-full"
-              />
-            </form>
             <svg
-              width="20"
+              width="50"
               id="icon"
-              height="21"
+              height="30"
               viewBox="0 0 20 21"
-              fill="none"
+              fill="white"
               xmlns="http://www.w3.org/2000/svg"
               onClick={onSearch}
             >

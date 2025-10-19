@@ -46,13 +46,8 @@ a {
 }
 
 .link2-1 {
-  border: solid lightgrey 1px;
-  width: 250px;
-  height: max-content;
-  border-radius: 20px;
   padding: 5px;
-  display: flex;
-  justify-content: space-between;
+  margin-top: 5px;
 }
 
 #profile {

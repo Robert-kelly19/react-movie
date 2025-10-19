@@ -13,7 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/detail/:id" element={<Detail />} />
           <Route path="/favourite" element={<Favourites />} />
-          <Route path="/search/:query" element={<Search />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </BrowserRouter>
     </MovieProvider>
