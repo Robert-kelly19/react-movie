@@ -3,7 +3,7 @@ import {useEffect, useState} from "react"
 import MovieCard from "../components/movie"
 export default function TopSearch() {
    const API_KEY =import.meta.env.VITE_APP_API_KEY
-   console.log('api key:', API_KEY)
+
     const [movies, setMovies] = useState([]);
     useEffect(() => {
         const fetchMovies = async () => {

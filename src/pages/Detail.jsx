@@ -5,10 +5,33 @@ import { useParams } from "react-router-dom";
 import "../css/detail.css";
 import MovieCard from "../components/movie";
 import Cast from "../components/Cast";
+import { toast } from "react-toastify";
 
 export default function Detail() {
-  function onlike() {
-    alert("added to favourite");
+  function onlike(movie) {
+       const tabFavorie = localStorage.getItem("localtabFavorie");
+    if (tabFavorie) {
+      const jsTabFavorie = JSON.parse(localStorage.getItem("localtabFavorie"));
+      // console.log("tablocal", jsTabFavorie);
+      const index = jsTabFavorie.findIndex((item) => item.id === movie.id);
+      if (index >= 0) {
+        toast.error("this movie is alredy in your favorie list");
+      } else {
+        const tab = JSON.parse(localStorage.getItem("localtabFavorie"));
+        const favorieTab = [...tab, { ...movie, favorie: true }];
+        localStorage.setItem("localtabFavorie", JSON.stringify(favorieTab));
+        toast.success("added to favourites");
+      }
+    } else {y
+      localStorage.setItem(
+        "localtabFavorie",
+        JSON.stringify([{ ...movie, favorie: true }])
+      );
+      toast.success("added to favourites");
+    }
+  }
+  function watchList(){
+    toast.success('added to watchList')
   }
   let { id } = useParams();
   const API_KEY = "42bff7ea17474804caad34f8da9f455b";
@@ -28,8 +51,7 @@ export default function Detail() {
         console.error("Error fetching movie:", error);
       }
     };
-    console.log(detailMovie);
-
+   
     if (id) fetchMovie();
   }, [id]);
 
@@ -47,7 +69,7 @@ export default function Detail() {
     };
     fetchMovie();
   }, [id]);
-  console.log(similar);
+
   useEffect(() => {
     const fetchCast = async () => {
       try {
@@ -55,7 +77,7 @@ export default function Detail() {
           `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_KEY}`
         );
         const data = await response.json();
-        setCast(data.cast); // 'cast' contains the movie's cast members
+        setCast(data.cast); 
       } catch (error) {
         console.error("Error fetching movie cast:", error);
       }
@@ -109,7 +131,7 @@ export default function Detail() {
                   </svg>
                   <p>Watch Now</p>
                 </div>
-                <div className="display2-2">
+                <div className="display2-2" onClick={watchList}>
                   <svg
                     id="more"
                     width="14"
