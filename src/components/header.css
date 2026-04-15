@@ -18,6 +18,15 @@ body {
   animation-range: exit -200px;
 }
 
+.container1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoBbV1cm1zPYG83x9vhcuLqS7zoD8Al52Bu-lGNIBk_q2r2yD3sOxV_oZwerMbBwZXVfse8Q&s=10');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment: scroll;
+  margin-top: 100px;
+}
+
 @keyframes scale {
   from{
     background-size: 100%;
@@ -156,12 +165,58 @@ body {
 .trend-grid {
   display: flex;
   overflow-x: scroll;
+  gap: 20px;
+  padding: 0 10px;
 }
 
 .trend {
   overflow: hidden;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.similar-card {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .trend-grid {
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .similar-card .poster img {
+    width: 140px;
+    height: 210px;
+  }
+
+  .similar-card {
+    width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trend-grid {
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  .similar-card .poster img {
+    width: 120px;
+    height: 180px;
+  }
+
+  .similar-card {
+    width: 120px;
+  }
+
+  .similar-card .card-title {
+    font-size: 12px;
+  }
+
+  .similar-card .card-rating {
+    font-size: 11px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -221,9 +276,5 @@ body {
   .trend h1 {
     margin-bottom: 15px;
     font-size: xx-large;
-  }
-
-  .trend-grid {
-    gap: 0;
   }
 }

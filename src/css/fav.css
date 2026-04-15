@@ -20,3 +20,23 @@
         opacity: 1;
     }
 }
+
+.fav-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .fav-grid {
+    gap: 15px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .fav-grid {
+    gap: 12px;
+  }
+}

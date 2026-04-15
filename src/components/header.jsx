@@ -10,12 +10,12 @@ export default function Header({ background }) {
       >
         <div className="container">
           <div className="container1">
-            <div className="content">
+            {/* <div className="content">
               <img
-                src="https://s3-alpha-sig.figma.com/img/dffb/b860/559f834e0275c009608027ccae5ee787?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ptphB~z9TILLT~Y72cYYv5-78aKqhjFpbLJtBKYDpvWhpNDaJ-R28Z4aO~dI8CavbzDlWxsT0UtbQCI-ivI7pzRAOv-9b87ReaRtlTDWpX~j00gFRPrTKGaMfGW0YdRdbJiz6bnpFwFo4Kz0tK3QDoZBHWq51CuOExIBcoF9q5dKhv01LwnEkFCBYdKvB~zcTP923Q5Fk2uu8VZV4dSmMsJ6OwkBIsnHbTOyLV0D-Z~yrt1CTLy8KfEvkf5RvFpajVl823wy1YFluAOjc6efHWqV~LaT7yH9AI20cauv8A1xDyHZU8XmGCzSqX2gR77B6GFH9KVeF9XopJf1ldFaKg__"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoBbV1cm1zPYG83x9vhcuLqS7zoD8Al52Bu-lGNIBk_q2r2yD3sOxV_oZwerMbBwZXVfse8Q&s=10"
                 alt="spiderman no way home"
               />
-            </div>
+            </div> */}
             <div className="genre">
               <p className="para1">CBFC:U/A</p> <p className="para">Action</p>{" "}
               <ul>

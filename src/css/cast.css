@@ -1,21 +1,26 @@
-.cast1 {
- font-family: "inter";
- margin-right: 15px;
+.cast-card {
+  flex-shrink: 0;
+  width: 140px;
+  text-align: center;
 }
 
-.cast img {
-  width: 100%;
+.cast-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
-.cast1-1 h1 {
-  font-size: 25px;
-  width: 170px;
+.cast-card .cast-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
 }
 
-.cast1-1 p {
-  font-size: 15px;
+.cast-card .cast-character {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
 }
-
-.cast1-1 {
-  margin-right: 100px;
-} 

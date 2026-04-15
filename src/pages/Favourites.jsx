@@ -10,18 +10,21 @@ export default function Favorie() {
   },[favorieData])
   return (
     <>
-     <NavBar/>
+      <NavBar/>
     <div className="text-white min-h-screen">
-          <main className="container mx-auto px-4 pt-20 mb-6">
-            <h1>Your favourites <span className="heart">&#x1F493;</span> will be added here</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {favorieData?.map((movie) => (
-                <MovieCard key={movie.id} movie={movie} />
-              ))}
-            </div>
+          <main className="container mx-auto px-4 pt-20 mb-6 fav">
+            {favorieData.length === 0 ? (
+              <h1>Your favourites <span className="heart">&#x1F493;</span> will be added here</h1>
+            ) : (
+              <div className="fav-grid">
+                {favorieData?.map((movie) => (
+                  <MovieCard key={movie.id} movie={movie} />
+                ))}
+              </div>
+            )}
           </main>
         </div>
          <Footer/>
-        </>
+      </>
   )
 }

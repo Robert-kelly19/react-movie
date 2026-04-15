@@ -1,6 +1,14 @@
 .card {
+  position: relative;
+  z-index: 2;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.trend-p {
+  position: absolute;
+  z-index: 1;
+  font-size: 60px;
 }
 
 button {
@@ -16,4 +24,68 @@ button {
   border-width: 1px;
   margin-top: 10px;
   padding-bottom: 50px;
+}
+
+.similar-card {
+  flex-shrink: 0;
+  width: 180px;
+}
+
+.similar-card .poster img {
+  width: 180px;
+  height: 270px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 12px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .similar-card {
+    width: 150px;
+  }
+
+  .similar-card .poster img {
+    width: 150px;
+    height: 225px;
+  }
+}
+
+@media (max-width: 480px) {
+  .similar-card {
+    width: 130px;
+  }
+
+  .similar-card .poster img {
+    width: 130px;
+    height: 195px;
+  }
+
+  .similar-card .card-title {
+    font-size: 12px;
+  }
+
+  .similar-card .card-rating {
+    font-size: 11px;
+  }
+}
+
+.similar-card:hover .poster img {
+  transform: scale(1.05);
+}
+
+.similar-card .card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.similar-card .card-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: #fbbf24;
 }
