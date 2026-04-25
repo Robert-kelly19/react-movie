@@ -1,0 +1,42 @@
+.fav h1 {
+  text-align: center;
+  font-family: "SF Compact Display", sans-serif;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.heart {
+  animation: beat 1s infinite;
+  transition: ease-in-out 1s;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes beat {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fav-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .fav-grid {
+    gap: 15px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .fav-grid {
+    gap: 12px;
+  }
+}

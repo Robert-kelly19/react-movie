@@ -1,0 +1,28 @@
+@import url('https://fonts.cdnfonts.com/css/sf-compact-display');
+:root {                                               
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.trend h1 {
+  font-size: large;
+  font-family: "SF Compact Display", sans-serif;
+  padding-bottom: 0;
+  margin-left: 30px;
+}
+
+.trend-grid img {
+  margin-top: 0px
+}
+
+@media (max-width: 760px) {
+  *{
+    margin: 0;
+    padding: 0;
+  }
+}
