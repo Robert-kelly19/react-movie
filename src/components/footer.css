@@ -130,16 +130,43 @@ select:focus {
 
 @media (max-width: 768px) {
   footer {
-    margin-top: -260px;
+    margin-top: 20px;
+    padding: 20px;
   }
 
   .first {
     flex-wrap: wrap;
-    gap: 0;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .first1,
+  .first2,
+  .first3,
+  .first4,
+  .first5 {
+    width: 100%;
+    height: auto;
   }
 
   .second {
     flex-wrap: wrap;
-    gap: 0;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .second1 {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .second2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #logo2 {
+    width: 80px;
   }
 }

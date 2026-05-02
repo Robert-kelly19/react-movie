@@ -71,37 +71,84 @@ a {
   nav {
     width: 100%;
     margin-top: 20px;
+    position: relative;
   }
+
+  .link {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   nav ul {
     display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    padding: 20px 0;
+    z-index: 999;
+    border-bottom: 1px solid #ffffff20;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #ffffff10;
+  }
+
+  nav ul li a {
+    font-size: 16px;
   }
 
   #logo {
     width: 60px;
   }
 
-  
-  .link2-1{
-   width: 170px;
+  .link2-1 {
+    width: auto;
   }
 
   .link2 {
-    margin-right: 30px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   .material-symbols-outlined {
     font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
     display: flex;
     margin-top: 4px;
+    cursor: pointer;
+    font-size: 28px;
+  }
+
+  .menu-toggle {
+    color: white;
   }
 
   #icon {
-    margin-left: -50px;
+    margin-left: 0;
+    width: 25px !important;
+    height: 25px !important;
   }
 
+  #profile {
+    width: 35px;
+    height: 35px;
+  }
 }
 
