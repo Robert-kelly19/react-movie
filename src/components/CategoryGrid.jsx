@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MovieCard from "./movie";
+import MovieCardSkeleton from "./MovieCardSkeleton";
 import "./movie.css";
 
 export default function CategoryGrid({ apiFunction, title, gridClassName = "trend-grid", mediaType = "movie" }) {
@@ -24,7 +25,16 @@ export default function CategoryGrid({ apiFunction, title, gridClassName = "tren
   }, [apiFunction, title]);
 
   if (loading) {
-    return <div className="loading">Loading {title}...</div>;
+    return (
+      <div className="trend">
+        <h1>{title}</h1>
+        <div className={gridClassName}>
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <MovieCardSkeleton key={i} />
+          ))}
+        </div>
+      </div>
+    );
   }
 
   return (

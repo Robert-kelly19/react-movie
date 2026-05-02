@@ -11,10 +11,10 @@ export default function Cast({ actor }) {
         alt={actor.name}
       />
       <div className="cast-name">
-        {actor.name?.split("-")[0]}
+        {actor.name}
       </div>
       <div className="cast-character">
-        {actor.character?.split("-")[0]}
+        {actor.character}
       </div>
     </div>
   );
