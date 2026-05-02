@@ -65,7 +65,10 @@ export default function Search() {
             ? `https://image.tmdb.org/t/p/w500${item.poster_path}`
             : "https://via.placeholder.com/500x750?text=No+Image";
 
-          const handleNavigate = () => navigate(`/detail/${item.id}`);
+          const handleNavigate = () => {
+            const type = item.media_type === "tv" ? "tv" : "movie";
+            navigate(`/detail/${item.id}/${type}`);
+          };
 
           return (
             <div key={item.id} id="film" onClick={handleNavigate}>
