@@ -10,6 +10,7 @@
     "cdk": "cdk"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "aws-cdk-lib": "2.215.0",
     "constructs": "^10.0.0",
     "lucide-react": "^0.546.0",

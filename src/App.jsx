@@ -5,6 +5,7 @@ import Detail from "./pages/Detail";
 import Favourites from "./pages/Favourites";
 import Movies from "./pages/Movies";
 import Series from "./pages/Series";
+import {Analytics} from "@vercel/analytics/react";
 import "./App.css";
 import { MovieProvider } from "./context/MovieContext";
 import { ToastContainer } from "react-toastify";
@@ -23,6 +24,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <ToastContainer/>
+      <Analytics />
     </MovieProvider>
   );
 }
