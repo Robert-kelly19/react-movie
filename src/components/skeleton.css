@@ -1,0 +1,67 @@
+.skeleton {
+  background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+.skeleton-card-poster {
+  width: 180px;
+  height: 270px;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .skeleton-card-poster {
+    width: 140px;
+    height: 210px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skeleton-card-poster {
+    width: 120px;
+    height: 180px;
+  }
+}
+
+.skeleton-hero {
+  height: 400px;
+  width: 100%;
+}
+
+.skeleton-poster {
+  height: 450px;
+  width: 100%;
+}
+
+.skeleton-text {
+  height: 16px;
+}
+
+.skeleton-title {
+  height: 32px;
+  width: 60%;
+}
+
+.skeleton-text-lg {
+  height: 24px;
+  width: 120px;
+}
+
+.skeleton-image {
+  border-radius: 4px;
+}
+
+.detail {
+  padding: 20px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

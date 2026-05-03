@@ -104,9 +104,37 @@
 }
 
 .detail-actions {
-  display: flex;
-  gap: 12px;
-}
+   display: flex;
+   gap: 12px;
+ }
+
+.back-button {
+   position: absolute;
+   top: 20px;
+   left: 24px;
+   background: rgba(0, 0, 0, 0.5);
+   color: white;
+   border: none;
+   border-radius: 8px;
+   padding: 8px 16px;
+   display: flex;
+   align-items: center;
+   gap: 6px;
+   cursor: pointer;
+   font-size: 14px;
+   font-weight: 500;
+   transition: all 0.2s ease;
+   z-index: 11;
+ }
+
+.back-button:hover {
+   background: rgba(0, 0, 0, 0.7);
+   transform: translateY(-2px);
+ }
+
+.back-button:active {
+   transform: translateY(0);
+ }
 
 .action-btn {
   display: flex;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
+import MovieCardSkeleton from "../components/MovieCardSkeleton";
 import "./search.css";
 
 export default function Search() {
@@ -9,15 +10,18 @@ export default function Search() {
 
   const [text, setText] = useState("");
   const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const backBtn = () => navigate(-1);
 
   useEffect(() => {
     if (!text.trim()) {
       setResults([]);
+      setLoading(false);
       return;
     }
 
+    setLoading(true);
     const fetchMovies = async () => {
       try {
         const response = await fetch(
@@ -30,6 +34,9 @@ export default function Search() {
         setResults(data.results || []);
       } catch (error) {
         console.error("Error fetching movies:", error);
+        setResults([]);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -56,24 +63,35 @@ export default function Search() {
       <div
         className="results-grid"
         style={{
-         
+          
         }}
       >
-        {results.map((item) => {
-          const title = item.title || item.name;
-          const poster = item.poster_path
-            ? `https://image.tmdb.org/t/p/w500${item.poster_path}`
-            : "https://via.placeholder.com/500x750?text=No+Image";
-
-          const handleNavigate = () => navigate(`/detail/${item.id}`);
-
-          return (
-            <div key={item.id} id="film" onClick={handleNavigate}>
-              <img src={poster} alt={title} />
-              <p>{title}</p>
+        {loading ? (
+          [1, 2, 3, 4, 5, 6].map((i) => (
+            <div key={i} id="film">
+              <MovieCardSkeleton />
             </div>
-          );
-        })}
+          ))
+        ) : (
+          results.map((item) => {
+            const title = item.title || item.name;
+            const poster = item.poster_path
+              ? `https://image.tmdb.org/t/p/w500${item.poster_path}`
+              : "https://via.placeholder.com/500x750?text=No+Image";
+
+            const handleNavigate = () => {
+              const type = item.media_type === "tv" ? "tv" : "movie";
+              navigate(`/detail/${item.id}/${type}`);
+            };
+
+            return (
+              <div key={item.id} id="film" onClick={handleNavigate}>
+                <img src={poster} alt={title} />
+                <p>{title}</p>
+              </div>
+            );
+          })
+        )}
       </div>
     </div>
   );
