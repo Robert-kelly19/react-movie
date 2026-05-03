@@ -24,7 +24,6 @@ export default function Trending() {
     
         fetchMovies();
       }, []);
-    console.log("trending movies:", movies)
     return (
       <div className="trend">
         <h1>Latest & TRending</h1>

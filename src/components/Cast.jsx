@@ -1,6 +1,9 @@
 import React from "react";
 import "../css/cast.css"
 export default function Cast({ actor }) {
+  // Determine character name - different fields for movie vs TV credits
+  const characterName = actor.character || actor.roles?.[0]?.character || actor.original_role || '';
+  
   return (
     <div className="cast-card">
       <img
@@ -14,7 +17,7 @@ export default function Cast({ actor }) {
         {actor.name}
       </div>
       <div className="cast-character">
-        {actor.character}
+        {characterName}
       </div>
     </div>
   );

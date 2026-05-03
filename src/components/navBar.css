@@ -85,13 +85,15 @@ a {
     display: none;
     position: absolute;
     top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    right: 0;
+    width: 220px;
+    min-height: max-content;
+    background-color: rgba(0, 0, 0, 0.85);
     flex-direction: column;
     padding: 20px 0;
     z-index: 999;
-    border-bottom: 1px solid #ffffff20;
+    border-radius: 8px;
+    border-left: 3px solid #ffffff20;
   }
 
   nav ul.active {
@@ -107,6 +109,7 @@ a {
 
   nav ul li a {
     font-size: 16px;
+    font-weight: bolder;
   }
 
   #logo {
